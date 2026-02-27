@@ -60,7 +60,7 @@ async function callClaude(prompt, includeImage, systemPrompt) {
   content.push({ type:'text', text:prompt });
   messages.push({ role:'user', content });
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('https://sudoku-proxy.fjcspeel.workers.dev', {
     method: 'POST',
     headers: { 'Content-Type':'application/json' },
     body: JSON.stringify({
